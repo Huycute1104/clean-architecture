@@ -1,5 +1,5 @@
 ﻿using Application.Contracts;
-using Application.DTOs;
+using Application.ViewModels.AuthModel;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;

@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.Contracts
+namespace Application.Services
 {
-    public interface IUser
+    public interface IAuthService
     {
         Task<RegisterResponse> RegisterUser(RegisterDTO registerDTO);
         Task<LoginResponse> Login(LoginDTO loginDTO);

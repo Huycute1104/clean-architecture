@@ -1,5 +1,5 @@
 ﻿using Application.Contracts;
-using Application.DTOs;
+using Application.ViewModels.AuthModel;
 using Domain.Entities;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
@@ -30,7 +30,7 @@ namespace Infrastructure.Repository
                 return new LoginResponse(false, "User not found");
 
             }
-            bool checkPassword = BCrypt.Net.BCrypt.Verify(loginDTO.Password, user.Password);
+            bool checkPassword = BCrypt.Net.BCrypt.Verify(loginDTO.Password, user.PasswordHash);
             if (checkPassword)
             {
                 return new LoginResponse(true, "Login Successfully", GenerateJWTToken(user));
@@ -69,9 +69,9 @@ namespace Infrastructure.Repository
             }
             myDbContext.Add(new User()
             {
-                Name = registerDTO.Name,
+                /*Name = registerDTO.Name,
                 Email = registerDTO.Email,
-                Password = BCrypt.Net.BCrypt.HashPassword(registerDTO.Password),
+                Password = BCrypt.Net.BCrypt.HashPassword(registerDTO.Password),*/
 
             });
             await myDbContext.SaveChangesAsync();

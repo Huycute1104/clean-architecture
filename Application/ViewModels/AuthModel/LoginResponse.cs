@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.DTOs
+namespace Application.ViewModels.AuthModel
 {
-    public record RegisterResponse(bool Flag, string ? Message = null!)
+    public record LoginResponse(bool Flag, string? Message = null!, string? Token = null!)
     {
     }
 }
