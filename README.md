@@ -36,7 +36,9 @@
     - cleanApplication
         dotnet add package AutoMapper.Extensions.Microsoft.DependencyInjection --version 12.0.0
         dotnet add package Microsoft.AspNetCore.Http.Abstractions --version 2.3.0
-
+        dotnet add package FluentValidation
+        dotnet add package FluentValidation.DependencyInjectionExtensions
+        
     - cleanDomain
         dotnet add package AutoMapper.Extensions.Microsoft.DependencyInjection --version 12.0.0
         dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore --version 8.0.14
