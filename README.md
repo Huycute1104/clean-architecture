@@ -62,6 +62,11 @@
         dotnet add package Quartz --version 3.14.0
         dotnet add package Quartz.Extensions.Hosting --version 3.14.0
 
+    - Utils
+        + Localization
+            dotnet add package AutoMapper.Extensions.Microsoft.DependencyInjection --version 12.0.0
+            dotnet add package CoreApiResponse --version 1.0.1
+            dotnet add package Microsoft.Extensions.Hosting.Abstractions --version 8.0.0
     - Test
         Tạo 
         dotnet new xunit -n be-authenticationDomain.Tests
